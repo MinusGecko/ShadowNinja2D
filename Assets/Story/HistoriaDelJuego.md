@@ -1,86 +1,151 @@
 # SHADOW NINJA 2D
-## Historia: El último viaje
+## El último te amo
+### Historia oficial del juego
 
-### El mundo
+> «Un mundo que se apaga. Una enfermedad que avanza. Un ninja que se niega a rendirse. Todo por llegar a tiempo y decir dos palabras: te amo».
 
-En un futuro olvidado, la humanidad vive entre castillos gigantes, aldeas amuralladas y ciudades construidas con tecnología antigua. Los reinos utilizan espadas, armaduras y arcos, pero también dependen de máquinas de energía, trenes magnéticos, guardianes mecánicos y cristales que alimentan sus fortalezas.
+## 1. El mundo de Eryndor
 
-A este mundo lo llaman **Eryndor**. Durante siglos, sus habitantes convivieron con una energía misteriosa conocida como el Pulso. Sin embargo, algo comenzó a corromperla.
+Eryndor es un mundo donde conviven castillos, aldeas amuralladas, espadas y armaduras con trenes magnéticos, máquinas antiguas, cristales de energía y guardianes mecánicos. Es una fantasía medieval que evolucionó con tecnología futurista.
 
-Una enfermedad extraña, llamada **la Plaga del Vacío**, empezó a extenderse por los reinos. No solo enferma a las personas: también contamina los bosques, apaga las máquinas y transforma a algunas criaturas en seres agresivos. Nadie conoce su origen ni sabe cómo detenerla.
+Durante siglos, sus habitantes utilizaron una energía llamada **el Pulso**. Pero un experimento para dominarla salió mal y liberó la **Plaga del Vacío**, una corrupción que enferma a las personas, altera a las criaturas y apaga poco a poco las máquinas.
 
-### El protagonista
+## 2. Kairo y el recuerdo de la academia
 
-El protagonista es **Kairo**, un joven ninja que vive en una pequeña aldea junto a **Ayla**, la persona que más ama. Ambos soñaban con conocer los territorios que existían más allá de las murallas y construir una vida tranquila.
+Kairo es un joven ninja que, antes de convertirse en viajero, tenía una vida sencilla y estudiaba para construir su futuro. En una academia conoció a una chica a la que llamaremos **Ayla**. Primero fueron amigos. Con el tiempo compartieron bromas, coqueteos, pequeños gestos de cariño y momentos que Kairo empezó a guardar con especial afecto.
 
-Pero la Plaga del Vacío llega hasta su hogar. Kairo consigue proteger a Ayla durante el primer ataque, aunque termina infectado al entrar en contacto con la energía corrupta. Desde entonces, una marca oscura aparece lentamente en su cuerpo y la enfermedad avanza con cada día que pasa.
+Un día, Ayla le dio una pequeña liga para el cabello. Más adelante le pidió que se la devolviera y Kairo se la quitó, pero conservó el recuerdo de aquel objeto. En el videojuego, la liga representa esos momentos y todo lo que quedó sin decir.
 
-Antes de que puedan encontrar una cura, unos soldados enmascarados llegan a la aldea y secuestran a Ayla. Se la llevan hacia la Ciudadela del Eclipse, un lugar lejano controlado por una organización que busca aprovechar el poder de la Plaga.
+La relación también tuvo momentos difíciles. Ayla cargaba con experiencias dolorosas de su pasado y le costaba volver a confiar y conectar con otras personas. Había buscado ayuda para comprender lo que sentía. Kairo quiso acompañarla, pero no podía resolver por ella aquello que le había ocurrido.
 
-Kairo intenta perseguirlos, pero su cuerpo ya está debilitado. Aun así, decide emprender el viaje.
+Finalmente, Ayla le dijo:
 
-No sabe si encontrará una cura. Tampoco sabe cuánto tiempo le queda antes de que la enfermedad lo venza. Solo tiene una certeza: necesita llegar hasta Ayla.
+**Ayla:** «Quiero que terminemos. No eres tú... son cosas mías. Hay cosas que todavía no sé cómo superar».
 
-### El viaje
+Kairo no entendió cómo algo que había sido tan bonito podía terminar tan rápido. Se quedó con preguntas, recuerdos y la liga guardada.
 
-El camino hacia la Ciudadela del Eclipse está dividido en regiones peligrosas. Cada una guarda secretos sobre la Plaga y sobre quienes se llevaron a Ayla.
+Esta parte está inspirada en sentimientos y experiencias personales compartidas por el creador, pero los personajes y acontecimientos del juego son ficticios. La historia no presenta el dolor de Ayla como culpa de ella ni convierte a Kairo en alguien con derecho a exigirle que se quede.
 
-**1. La Aldea de las Cenizas**
+## 3. La separación y el comienzo de la aventura
 
-Es el lugar donde comienza la aventura. Las casas están destruidas, las máquinas dejaron de funcionar y los caminos están llenos de criaturas afectadas por la Plaga. Kairo debe escapar de su antiguo hogar y encontrar una ruta hacia el primer reino.
+En el momento de la despedida, la Plaga del Vacío alcanza la ciudad. Una fuerza enmascarada aparece y se lleva a Ayla hacia una región remota: la Ciudadela del Eclipse. Kairo queda afectado por la energía corrupta.
 
-**2. El Bosque de los Circuitos**
+Al verla desaparecer, Kairo grita:
 
-Un bosque donde árboles gigantes crecieron alrededor de antiguas máquinas. Sus raíces están contaminadas y los guardianes mecánicos atacan a cualquiera que se acerque. Kairo descubre que la Plaga puede controlar tanto la naturaleza como la tecnología.
+**Kairo:** «¿Por qué...? ¿Por qué tenía que pasar esto? ¿Por qué ahora?».
 
-**3. El Reino de Hierro**
+La marca de la Plaga aparece en su cuerpo. El dolor aumenta y su fuerza disminuye. Aun así, decide emprender el viaje. No sabe si Ayla querrá volver con él, ni puede exigirle una respuesta. Solo quiere encontrarla, saber qué ocurrió y decirle lo que todavía siente.
 
-Una ciudad medieval rodeada de murallas metálicas, puentes móviles y fábricas abandonadas. Sus habitantes desconfían de los viajeros y algunos soldados intentan detenerlo. Aquí Kairo descubre que la organización responsable del secuestro está reuniendo energía corrupta.
+**Kairo:** «No sé si todavía quieres verme... pero necesito llegar hasta ti. Hay algo que nunca pude decirte».
 
-**4. Las Catacumbas del Pulso**
+## 4. El viaje: cinco regiones
 
-Un complejo subterráneo construido sobre el origen de la energía que alimentaba Eryndor. Está lleno de trampas, mecanismos antiguos y criaturas deformadas por la Plaga. Kairo encuentra registros que revelan que la enfermedad no apareció por accidente: alguien intentó controlar el Pulso y perdió el control.
+### Capítulo 1 — La Aldea de las Cenizas
+Kairo abandona su hogar. Entre casas destruidas encuentra el primer recuerdo de la academia. Comprende que el viaje será más difícil de lo que imaginaba.
 
-**5. La Ciudadela del Eclipse**
+**Diálogo:** «Primero fuimos amigos... Nunca pensé que terminaría extrañando tanto aquellas conversaciones».
 
-El último destino. Una enorme fortaleza suspendida sobre una ciudad en ruinas. Allí se encuentra Ayla, prisionera de quienes desean utilizarla como parte de un experimento relacionado con la Plaga. Kairo tendrá que superar sus desafíos finales para llegar hasta ella.
+### Capítulo 2 — El Bosque de los Circuitos
+Las raíces han envuelto máquinas antiguas y criaturas contaminadas patrullan los caminos. Kairo encuentra una flor parecida a una que Ayla le mostró.
 
-### La enfermedad y el tiempo
+**Flashback:** ambos conversan durante un descanso en la academia. El recuerdo tiene colores cálidos y música tranquila.
 
-La Plaga del Vacío avanza durante el viaje. A medida que Kairo atraviesa las regiones, la marca oscura se extiende y sus fuerzas disminuyen. En ciertos momentos puede escuchar voces o ver recuerdos confusos provocados por la energía corrupta.
+**Diálogo:** «Me acuerdo de ese día. Parecía uno más... ahora daría cualquier cosa por volver a escucharte».
 
-La enfermedad no es solo una amenaza física: también representa el miedo de no llegar a tiempo. El jugador sentirá la urgencia del viaje mediante cambios en el mundo, escenas y acontecimientos de la historia, sin que eso signifique que cada error termine inmediatamente la partida.
+### Capítulo 3 — El Reino de Hierro
+Una ciudad de murallas metálicas y fábricas abandonadas. Kairo descubre que los soldados enmascarados trabajan para quienes investigan la Plaga.
 
-### El verdadero objetivo
+**Diálogo:** «No puedo cambiar lo que pasó entre nosotros. Pero todavía puedo descubrir qué te hicieron».
 
-Al principio, Kairo cree que su única misión es rescatar a Ayla. Pero durante el recorrido descubre que la Plaga amenaza a todos los reinos y que la organización que la provocó pretende convertir su energía en un arma.
+### Capítulo 4 — Las Catacumbas del Pulso
+Kairo encuentra documentos que revelan el origen de la Plaga. La enfermedad avanza y los recuerdos aparecen con mayor intensidad.
 
-Así, su viaje se convierte también en una oportunidad para detener la corrupción y salvar a quienes todavía pueden ser protegidos.
+**Diálogo:** «Ah... cómo duele. Solo un poco más. Tengo que llegar».
 
-Sin embargo, Kairo nunca olvida por qué comenzó a caminar.
+### Capítulo 5 — La Ciudadela del Eclipse
+Ayla está prisionera porque conoce información sobre el experimento. Kairo debe atravesar las últimas defensas y decidir qué hacer con la verdad que descubrió.
 
-No busca riquezas, gloria ni convertirse en un héroe. Solo quiere llegar hasta Ayla, mirarla una vez más y decirle las palabras que no pudo pronunciar cuando todo comenzó:
+**Diálogo:** «He cruzado todo este mundo. No sé qué pasará cuando te vea... pero no quería dejar estas palabras sin decir».
 
-**«Te amo. Crucé todo este mundo para volver a verte».**
+## 5. La enfermedad: la Plaga del Vacío
 
-### Posibles finales
+La Plaga es ficticia y está conectada con el Pulso. Su avance se muestra mediante cambios visuales, sonidos, animaciones y diálogos. No debe castigar al jugador de forma injusta: la enfermedad crea tensión narrativa, pero los desafíos se superan con habilidad, exploración y decisiones.
 
-- **Final luminoso:** Kairo logra detener la Plaga y liberar a Ayla. El destino de ambos queda abierto a la esperanza.
-- **Final agridulce:** Kairo consigue llegar hasta Ayla y detener el experimento, pero la enfermedad deja consecuencias que cambiarán sus vidas para siempre.
-- **Final secreto:** Al descubrir el origen del Pulso, el jugador encuentra una forma inesperada de purificarlo y revelar quién estuvo detrás de la Plaga.
+Etapas narrativas:
+1. Cansancio y una marca tenue.
+2. Dolor y breves pausas.
+3. Visiones y recuerdos más frecuentes.
+4. Debilidad extrema al acercarse a la Ciudadela.
 
-Los finales definitivos podrán ajustarse cuando se diseñe el último nivel.
+## 6. Sistema de recuerdos
 
----
+El jugador puede encontrar cinco recuerdos importantes. Cada uno desbloquea un flashback:
 
-## Tono y personalidad del juego
+1. **La primera conversación:** cuando Kairo y Ayla se conocieron en la academia.
+2. **La amistad:** las bromas y conversaciones que compartían.
+3. **La liga:** el pequeño objeto que ella le entregó y que luego pidió recuperar.
+4. **Los días difíciles:** la distancia, las heridas del pasado y la conversación en la que Ayla explica que necesita terminar la relación.
+5. **La despedida:** el último momento antes de que Ayla desaparezca y Kairo decida emprender el viaje.
 
-- **Género:** plataformas 2D, acción, aventura y exploración.
-- **Ambientación:** fantasía medieval mezclada con tecnología futurista.
-- **Tono:** emotivo, misterioso y aventurero.
-- **Tema central:** el amor, la esperanza, el sacrificio y la perseverancia.
-- **Objetivo del jugador:** atravesar cinco regiones, superar obstáculos, descubrir el origen de la Plaga y llegar hasta Ayla.
+Los recuerdos no cambian el pasado. Ayudan al jugador a comprenderlo. Encontrar los cinco y descubrir el origen de la Plaga, además de tomar la decisión compasiva en el momento clave, permite acceder al final verdadero.
 
-## Frase promocional
+## 7. Los seis finales
 
-**«Un mundo que se apaga. Una enfermedad que avanza. Un ninja que se niega a rendirse. Todo por llegar a tiempo y decir dos palabras: te amo».**
+Los cinco primeros son desenlaces alternativos. **El sexto es el único final verdadero y canónico.**
+
+### Final 1 — Ya no somos los mismos
+Kairo llega hasta Ayla y consigue liberarla. Pero ella le dice que ya no lo quiere de esa manera y que no desea continuar la relación. Kairo está dolido, pero acepta su decisión. Ambos se separan y toman caminos distintos.
+
+**Ayla:** «Lo siento, Kairo. No quiero volver a esa relación».
+**Kairo:** «Quería encontrarte... aunque no sabía qué pasaría después».
+
+### Final 2 — La carta
+Kairo y Ayla se encuentran. Ambos aceptan que ya no pueden estar juntos. Ella le deja una carta y se marcha para comenzar una nueva etapa.
+
+**Carta:** «Gracias por los momentos que compartimos. Espero que encuentres paz y puedas seguir adelante».
+
+### Final 3 — Silencio en la Ciudadela
+Kairo llega a la fortaleza, pero descubre que Ayla ha sido asesinada por quienes la mantenían prisionera. Encuentra la liga entre sus pertenencias. El viaje termina en silencio.
+
+### Final 4 — Demasiado tarde
+Kairo llega cuando Ayla ya ha comenzado una nueva vida con otra persona. Comprende que sus caminos cambiaron. La Plaga lo vence después de abandonar la Ciudadela. Este final habla de aceptar que no siempre podemos recuperar lo que quedó atrás.
+
+### Final 5 — Un mañana distinto
+Kairo libera a Ayla y ambos detienen el experimento. Encuentran una posibilidad de tratar la Plaga. No se promete que volverán a ser pareja: deciden afrontar el futuro con honestidad y sin obligarse a repetir el pasado.
+
+### Final 6 — FINAL VERDADERO: Al final, pude encontrarte
+Se desbloquea al encontrar los cinco recuerdos, descubrir el origen de la Plaga y tomar la decisión compasiva. Kairo llega a Ayla y consigue rescatarla. La enfermedad, sin embargo, ha avanzado demasiado.
+
+**Ayla:** «Kairo... ¿por qué viniste hasta aquí?».
+**Kairo:** «Porque quería verte una vez más... y decirte algo que guardé durante todo el viaje».
+**Ayla:** «No tienes que demostrarme nada».
+**Kairo:** «Lo sé. Solo quería que lo supieras. Te amo».
+
+Kairo muere después de esos últimos momentos junto a ella. La escena no presenta su muerte como una recompensa ni como una prueba de amor: es el desenlace trágico de una aventura marcada por la enfermedad y el tiempo.
+
+### Escena epílogo del final verdadero
+
+Años después, Ayla regresa a un lugar tranquilo al amanecer. Sobre una piedra coloca una flor, la pequeña liga y **dos anillos**. Los objetos representan los recuerdos, los caminos que compartieron y todo aquello que la aventura dejó atrás.
+
+La cámara se aleja lentamente. Aparece la frase:
+
+**«Al final, pude encontrarte...»**
+
+Después comienzan los créditos.
+
+## 8. Cómo se integra al videojuego
+
+- Los diálogos aparecen al entrar en zonas narrativas y se avanzan con la tecla E.
+- Los flashbacks se activan al recoger recuerdos.
+- La enfermedad avanza en momentos concretos de la historia.
+- Las decisiones y descubrimientos registran las condiciones de los finales.
+- El final verdadero requiere completar la colección de recuerdos y descubrir el origen de la Plaga.
+- La escena de la flor, la liga y los dos anillos aparece después del final verdadero.
+
+## 9. Identidad del juego
+
+- **Género:** plataformas 2D, acción, aventura y narrativa.
+- **Ambientación:** mundo medieval futurista.
+- **Tono:** melancólico, misterioso y esperanzador.
+- **Tema central:** memoria, despedida, aceptación y perseverancia.
+- **Objetivo:** recorrer Eryndor, encontrar a Ayla, descubrir el origen de la Plaga y conocer el desenlace de Kairo.
