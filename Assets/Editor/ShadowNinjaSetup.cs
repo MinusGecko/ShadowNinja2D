@@ -88,7 +88,16 @@ public static class ShadowNinjaSetup
         orbCollider.isTrigger = true;
         orb.AddComponent<Collectible>();
 
-        // Story introduction and first memory flashback\n        CreateStoryTrigger("Primer recuerdo", new Vector3(-3.4f, -1.2f, 0), "KAIRO", "La conocí mientras me preparaba para mi futuro. Primero fuimos amigos; después llegaron las bromas, los pequeños cariños y momentos que nunca pensé que extrañaría.", false, false);\n        CreateMemory(new Vector3(6.2f, -1.2f, 0));\n        CreateStoryTrigger("La enfermedad avanza", new Vector3(8.5f, -1.2f, 0), "KAIRO", "Ah... cómo me duele. No puedo detenerme ahora. Todavía tengo que encontrarla.", true, false);\n\n        // Simple HUD
+        // Story introduction and five memory flashbacks
+        CreateStoryTrigger("Primer recuerdo", new Vector3(-3.4f, -1.2f, 0), "KAIRO", "La conocí mientras me preparaba para mi futuro. Primero fuimos amigos; después llegaron las bromas, los pequeños cariños y momentos que nunca pensé que extrañaría.", false, false);
+        CreateMemory(new Vector3(-2.0f, -1.1f, 0), "La primera conversación", "En la academia nos conocimos. Al principio solo éramos dos estudiantes que compartían algunas palabras.");
+        CreateMemory(new Vector3(0.2f, -1.1f, 0), "La amistad", "Con el tiempo llegaron las bromas, las conversaciones y los pequeños gestos de cariño. Kairo guarda esos días con afecto.");
+        CreateMemory(new Vector3(5.8f, -1.1f, 0), "La liga", "Ayla le dio una pequeña liga. Después le pidió que se la devolviera. Kairo la conservó como recuerdo de aquel momento.");
+        CreateMemory(new Vector3(7.4f, -1.1f, 0), "La despedida", "«Quiero que terminemos. No eres tú... son cosas mías». Kairo no entendió todo lo que ella sentía, pero sabía que debía respetar su decisión.");
+        CreateStoryTrigger("La enfermedad avanza", new Vector3(8.8f, -1.2f, 0), "KAIRO", "Ah... cómo me duele. No puedo detenerme ahora. Todavía tengo que encontrarla.", true, false);
+        CreateMemory(new Vector3(10.0f, -1.1f, 0), "La promesa", "Kairo mira la liga y recuerda por qué emprendió el viaje: quería volver a verla y decirle lo que guardaba en su corazón.");
+
+        // Simple HUD
         GameObject canvasObject = new GameObject("HUD");
         Canvas canvas = canvasObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
