@@ -132,7 +132,7 @@ public static class ShadowNinjaSetup
         data.ApplyModifiedProperties();
     }
 
-    private static void CreateMemory(Vector3 position)
+    private static void CreateMemory(Vector3 position, string memoryName, string flashback)
     {
         GameObject memory = new GameObject("Recuerdo: la liga");
         memory.transform.position = position;
@@ -142,8 +142,8 @@ public static class ShadowNinjaSetup
         collider.isTrigger = true;
         MemoryPickup pickup = memory.AddComponent<MemoryPickup>();
         SerializedObject data = new SerializedObject(pickup);
-        data.FindProperty("memoryName").stringValue = "La liga";
-        data.FindProperty("flashback").stringValue = "En la academia primero fuimos amigos. Un día me dio una liga y me pidió que se la devolviera. Aunque después la guardé, ese pequeño objeto se convirtió en un recuerdo de los momentos que compartimos.";
+        data.FindProperty("memoryName").stringValue = memoryName;
+        data.FindProperty("flashback").stringValue = flashback;
         data.ApplyModifiedProperties();
     }
 
