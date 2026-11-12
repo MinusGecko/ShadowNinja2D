@@ -122,7 +122,7 @@ public static class ShadowNinjaSetup
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
-        EditorUtility.DisplayDialog("Shadow Ninja 2D", "¡Escena inicial creada! Pulsa Play para probar el movimiento, salto y ataque.", "Aceptar");
+        EditorUtility.DisplayDialog("Shadow Ninja 2D", "¡Escena de plataformas creada! Pulsa Play para probar movimiento, saltos, ataque y recuerdos. Los sprites actuales son marcadores provisionales; reemplázalos por ilustraciones 2D dibujadas para conseguir el estilo visual de referencia.", "Aceptar");
     }
 
     private static void CreateStoryTrigger(string objectName, Vector3 position, string speaker, string words, bool illness, bool research)
@@ -184,7 +184,7 @@ public static class ShadowNinjaSetup
         if (importer != null && importer.textureType != TextureImporterType.Sprite)
         {
             importer.textureType = TextureImporterType.Sprite;
-            importer.filterMode = FilterMode.Point;
+            importer.filterMode = FilterMode.Bilinear;
             importer.SaveAndReimport();
         }
         return AssetDatabase.LoadAssetAtPath<Sprite>(path);
