@@ -35,6 +35,7 @@ public static class ShadowNinjaSetup
 
         // Game manager
         new GameObject("GameManager").AddComponent<GameManager>();
+        new GameObject("StoryManager").AddComponent<StoryManager>();
 
         // Ground
         GameObject ground = MakeSpriteObject("Suelo", floorSprite, new Vector3(0, -2.1f, 0), new Vector3(22, 1, 1));
@@ -87,7 +88,7 @@ public static class ShadowNinjaSetup
         orbCollider.isTrigger = true;
         orb.AddComponent<Collectible>();
 
-        // Simple HUD
+        // Story introduction and first memory flashback\n        CreateStoryTrigger("Primer recuerdo", new Vector3(-3.4f, -1.2f, 0), "KAIRO", "La conocí mientras me preparaba para mi futuro. Primero fuimos amigos; después llegaron las bromas, los pequeños cariños y momentos que nunca pensé que extrañaría.", false, false);\n        CreateMemory(new Vector3(6.2f, -1.2f, 0));\n        CreateStoryTrigger("La enfermedad avanza", new Vector3(8.5f, -1.2f, 0), "KAIRO", "Ah... cómo me duele. No puedo detenerme ahora. Todavía tengo que encontrarla.", true, false);\n\n        // Simple HUD
         GameObject canvasObject = new GameObject("HUD");
         Canvas canvas = canvasObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -113,6 +114,37 @@ public static class ShadowNinjaSetup
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
         EditorUtility.DisplayDialog("Shadow Ninja 2D", "¡Escena inicial creada! Pulsa Play para probar el movimiento, salto y ataque.", "Aceptar");
+    }
+
+    private static void CreateStoryTrigger(string objectName, Vector3 position, string speaker, string words, bool illness, bool research)
+    {
+        GameObject trigger = new GameObject(objectName);
+        trigger.transform.position = position;
+        BoxCollider2D collider = trigger.AddComponent<BoxCollider2D>();
+        collider.isTrigger = true;
+        collider.size = new Vector2(1.5f, 3f);
+        StoryTrigger story = trigger.AddComponent<StoryTrigger>();
+        SerializedObject data = new SerializedObject(story);
+        data.FindProperty("speaker").stringValue = speaker;
+        data.FindProperty("words").stringValue = words;
+        data.FindProperty("advancesIllness").boolValue = illness;
+        data.FindProperty("revealsResearch").boolValue = research;
+        data.ApplyModifiedProperties();
+    }
+
+    private static void CreateMemory(Vector3 position)
+    {
+        GameObject memory = new GameObject("Recuerdo: la liga");
+        memory.transform.position = position;
+        SpriteRenderer renderer = memory.AddComponent<SpriteRenderer>();
+        renderer.sprite = MakeSprite("Assets/Art/memory_tie.png", new Color(0.95f, 0.45f, 0.7f));
+        CircleCollider2D collider = memory.AddComponent<CircleCollider2D>();
+        collider.isTrigger = true;
+        MemoryPickup pickup = memory.AddComponent<MemoryPickup>();
+        SerializedObject data = new SerializedObject(pickup);
+        data.FindProperty("memoryName").stringValue = "La liga";
+        data.FindProperty("flashback").stringValue = "En la academia primero fuimos amigos. Un día me dio una liga y me pidió que se la devolviera. Aunque después la guardé, ese pequeño objeto se convirtió en un recuerdo de los momentos que compartimos.";
+        data.ApplyModifiedProperties();
     }
 
     private static GameObject MakeSpriteObject(string objectName, Sprite sprite, Vector3 position, Vector3 scale)
