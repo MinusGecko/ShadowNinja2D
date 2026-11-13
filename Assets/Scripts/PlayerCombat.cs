@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextAttackTime)
+        if ((Input.GetMouseButtonDown(0) || MobileControlButton.ConsumeAttack()) && Time.time >= nextAttackTime)
         {
             Attack();
             nextAttackTime = Time.time + attackCooldown;
