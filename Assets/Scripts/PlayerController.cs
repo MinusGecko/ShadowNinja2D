@@ -18,8 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space)) jumpRequested = true;
+        moveInput = Mathf.Clamp(Input.GetAxisRaw("Horizontal") + MobileControlButton.Horizontal, -1f, 1f);
+        if (Input.GetKeyDown(KeyCode.Space) || MobileControlButton.ConsumeJump()) jumpRequested = true;
 
         if (moveInput > 0.01f && !facingRight) Flip();
         else if (moveInput < -0.01f && facingRight) Flip();
