@@ -6,6 +6,11 @@ public class MobileControlButton : MonoBehaviour, IPointerDownHandler, IPointerU
     public enum Control { Left, Right, Jump, Attack }
     public Control control;
 
+    private void Awake()
+    {
+        if (!Application.isMobilePlatform) gameObject.SetActive(false);
+    }
+
     private static bool leftHeld, rightHeld;
     private static bool jumpPressed, attackPressed;
 
