@@ -31,7 +31,6 @@ public static class ShadowNinjaSetup
         camera.orthographicSize = 5f;
         camera.backgroundColor = new Color(0.025f, 0.035f, 0.09f);
         cameraObject.transform.position = new Vector3(0, 1, -10);
-        cameraObject.AddComponent<AudioListener>();
 
         // Game manager
         new GameObject("GameManager").AddComponent<GameManager>();
@@ -72,6 +71,9 @@ public static class ShadowNinjaSetup
         combatData.FindProperty("enemyLayer").intValue = 1 << 8;
         combatData.ApplyModifiedProperties();
 
+        CameraFollow cameraFollow = cameraObject.AddComponent<CameraFollow>();
+        cameraFollow.target = player.transform;
+
         // Enemy
         GameObject enemy = MakeSpriteObject("Dron enemigo", enemySprite, new Vector3(3, -1.35f, 0), new Vector3(0.9f, 0.9f, 1));
         enemy.layer = 8;
@@ -103,6 +105,13 @@ public static class ShadowNinjaSetup
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvasObject.AddComponent<CanvasScaler>();
         canvasObject.AddComponent<GraphicRaycaster>();
+        CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = new Vector2(1920, 1080);
+        CreateMobileButton(canvasObject.transform, "IZQ", MobileControlButton.Control.Left, new Vector2(0.08f, 0.16f));
+        CreateMobileButton(canvasObject.transform, "DER", MobileControlButton.Control.Right, new Vector2(0.20f, 0.16f));
+        CreateMobileButton(canvasObject.transform, "SALTAR", MobileControlButton.Control.Jump, new Vector2(0.84f, 0.18f));
+        CreateMobileButton(canvasObject.transform, "ATACAR", MobileControlButton.Control.Attack, new Vector2(0.94f, 0.18f));
         GameObject labelObject = new GameObject("Instrucciones");
         labelObject.transform.SetParent(canvasObject.transform, false);
         Text label = labelObject.AddComponent<Text>();
@@ -118,11 +127,46 @@ public static class ShadowNinjaSetup
         rect.anchoredPosition = new Vector2(20, -20);
         rect.sizeDelta = new Vector2(700, 90);
 
+        GameObject eventSystem = new GameObject("EventSystem");
+        eventSystem.AddComponent<UnityEngine.EventSystems.EventSystem>();
+        eventSystem.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+
         EditorSceneManager.SaveScene(scene, ScenePath);
         EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
         EditorUtility.DisplayDialog("Shadow Ninja 2D", "¡Escena de plataformas creada! Pulsa Play para probar movimiento, saltos, ataque y recuerdos. Los sprites actuales son marcadores provisionales; reemplázalos por ilustraciones 2D dibujadas para conseguir el estilo visual de referencia.", "Aceptar");
+    }
+
+    private static void CreateMobileButton(Transform parent, string caption, MobileControlButton.Control control, Vector2 anchor)
+    {
+        GameObject button = new GameObject("Touch_" + caption);
+        button.transform.SetParent(parent, false);
+        RectTransform rect = button.AddComponent<RectTransform>();
+        rect.anchorMin = anchor;
+        rect.anchorMax = anchor;
+        rect.pivot = new Vector2(0.5f, 0.5f);
+        rect.anchoredPosition = Vector2.zero;
+        rect.sizeDelta = new Vector2(150, 110);
+
+        UnityEngine.UI.Image image = button.AddComponent<UnityEngine.UI.Image>();
+        image.color = new Color(0.08f, 0.12f, 0.2f, 0.55f);
+        MobileControlButton touch = button.AddComponent<MobileControlButton>();
+        touch.control = control;
+
+        GameObject textObject = new GameObject("Label");
+        textObject.transform.SetParent(button.transform, false);
+        RectTransform textRect = textObject.AddComponent<RectTransform>();
+        textRect.anchorMin = Vector2.zero;
+        textRect.anchorMax = Vector2.one;
+        textRect.offsetMin = Vector2.zero;
+        textRect.offsetMax = Vector2.zero;
+        Text text = textObject.AddComponent<Text>();
+        text.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        text.text = caption;
+        text.alignment = TextAnchor.MiddleCenter;
+        text.fontSize = 22;
+        text.color = Color.white;
     }
 
     private static void CreateStoryTrigger(string objectName, Vector3 position, string speaker, string words, bool illness, bool research)
