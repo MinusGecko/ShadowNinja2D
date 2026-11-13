@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_player"]
+[ext_resource type="Script" path="res://Scripts/MobileHUD.gd" id="2_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(34, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(2200, 80)
+
+[node name="Main" type="Node2D"]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="World"]
+position = Vector2(500, 650)
+
+[node name="FloorVisual" type="Polygon2D" parent="World/Floor"]
+polygon = PackedVector2Array(-1100, -40, 1100, -40, 1100, 40, -1100, 40)
+color = Color(0.18, 0.23, 0.3, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Floor"]
+shape = SubResource("RectangleShape2D_floor")
+
+[node name="PlatformA" type="StaticBody2D" parent="World"]
+position = Vector2(300, 510)
+
+[node name="Visual" type="Polygon2D" parent="World/PlatformA"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.34, 0.42, 0.52, 1)
+
+[node name="Collision" type="CollisionShape2D" parent="World/PlatformA"]
+shape = SubResource("RectangleShape2D_floor")
+scale = Vector2(0.09, 0.3)
+
+[node name="PlatformB" type="StaticBody2D" parent="World"]
+position = Vector2(620, 410)
+
+[node name="Visual" type="Polygon2D" parent="World/PlatformB"]
+polygon = PackedVector2Array(-90, -12, 90, -12, 90, 12, -90, 12)
+color = Color(0.34, 0.42, 0.52, 1)
+
+[node name="Collision" type="CollisionShape2D" parent="World/PlatformB"]
+shape = SubResource("RectangleShape2D_floor")
+scale = Vector2(0.082, 0.3)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 560)
+script = ExtResource("1_player")
+
+[node name="BodyVisual" type="Polygon2D" parent="Player"]
+polygon = PackedVector2Array(-14, -28, 14, -28, 17, 12, 0, 29, -17, 12)
+color = Color(0.16, 0.72, 0.78, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -100)
+enabled = true
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
+
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="MobileControls" type="Control" parent="HUD"]
+set_anchors_and_offsets_preset = 15
+script = ExtResource("2_hud")
