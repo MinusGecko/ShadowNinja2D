@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://Scripts/MobileHUD.gd" id="2_hud"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="3_enemy"]
+[ext_resource type="Texture2D" path="res://Art/Backgrounds/ForestRuins.svg" id="4_background"]
+[ext_resource type="Texture2D" path="res://Art/Characters/Kairo.svg" id="5_kairo"]
+[ext_resource type="Texture2D" path="res://Art/Enemies/VoidSentinel.svg" id="6_enemy_art"]
 
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(30, 54)
@@ -18,19 +21,16 @@ size = Vector2(62, 42)
 
 [node name="Main" type="Node2D"]
 
-[node name="Background" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(-1000, -1000, 3000, -1000, 3000, 1200, -1000, 1200)
-color = Color(0.055, 0.085, 0.14, 1)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(1200, 360)
+texture = ExtResource("4_background")
 
-[node name="Moon" type="Polygon2D" parent="."]
-position = Vector2(1020, 150)
-polygon = PackedVector2Array(0, -55, 25, -48, 48, -25, 55, 0, 48, 25, 25, 48, 0, 55, -25, 48, -48, 25, -55, 0, -48, -25, -25, -48)
-color = Color(0.63, 0.77, 0.83, 0.8)
-
-[node name="DistantTower" type="Polygon2D" parent="."]
-position = Vector2(850, 470)
-polygon = PackedVector2Array(-120, 120, -120, -90, -75, -130, -30, -90, -30, -20, 20, -20, 20, -110, 65, -150, 110, -110, 110, 120)
-color = Color(0.11, 0.16, 0.23, 1)
+[node name="BackgroundGlow" type="PointLight2D" parent="."]
+position = Vector2(1780, 155)
+color = Color(0.55, 0.72, 0.78, 1)
+energy = 0.35
+texture = ExtResource("4_background")
+texture_scale = 0.02
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(1100, 650)
@@ -78,9 +78,10 @@ collision_layer = 1
 collision_mask = 1
 script = ExtResource("1_player")
 
-[node name="BodyVisual" type="Polygon2D" parent="Player"]
-polygon = PackedVector2Array(-13, -26, 13, -26, 16, 12, 0, 28, -16, 12)
-color = Color(0.12, 0.67, 0.72, 1)
+[node name="BodyVisual" type="Sprite2D" parent="Player"]
+position = Vector2(0, -4)
+texture = ExtResource("5_kairo")
+scale = Vector2(0.78, 0.78)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("PlayerShape")
@@ -117,9 +118,10 @@ collision_layer = 2
 collision_mask = 0
 script = ExtResource("3_enemy")
 
-[node name="Visual" type="Polygon2D" parent="Enemy"]
-polygon = PackedVector2Array(-17, -25, 17, -25, 21, 14, 0, 26, -21, 14)
-color = Color(0.72, 0.25, 0.29, 1)
+[node name="Visual" type="Sprite2D" parent="Enemy"]
+position = Vector2(0, -5)
+texture = ExtResource("6_enemy_art")
+scale = Vector2(0.78, 0.78)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("PlayerShape")
