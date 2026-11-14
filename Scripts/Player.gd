@@ -6,6 +6,8 @@ extends CharacterBody2D
 @export var max_health: int = 5
 
 var health: int
+var energy_shards: int = 0
+var memories_found: int = 0
 var facing: int = 1
 var attack_timer: float = 0.0
 var attack_cooldown: float = 0.0
@@ -22,6 +24,8 @@ var visual_base_scale := Vector2(0.48, 0.48)
 
 func _ready() -> void:
     health = max_health
+    add_to_group("player")
+    _update_status()
     body_visual.position = visual_base_position
     body_visual.scale = visual_base_scale
     attack_area.monitoring = false
@@ -121,3 +125,16 @@ func take_damage(amount: int = 1) -> void:
 func _on_attack_area_body_entered(body: Node2D) -> void:
     if body.has_method("take_damage"):
         body.take_damage(1)
+
+func collect_energy(value: int = 1) -> void:
+    energy_shards += value
+    _update_status()
+
+func collect_memory() -> void:
+    memories_found += 1
+    _update_status()
+
+func _update_status() -> void:
+    var status_nodes := get_tree().get_nodes_in_group("hud_status")
+    for status in status_nodes:
+        status.text = "VIDA: %d   ENERGÍA: %d   RECUERDOS: %d/3" % [health, energy_shards, memories_found]
