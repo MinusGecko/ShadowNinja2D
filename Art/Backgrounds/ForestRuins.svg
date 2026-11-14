@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="720" viewBox="0 0 2400 720">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#101a31"/><stop offset=".55" stop-color="#26364c"/><stop offset="1" stop-color="#53616a"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#d7e7df" stop-opacity=".55"/><stop offset="1" stop-color="#b8d6d8" stop-opacity="0"/></radialGradient>
+ <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#53616c"/><stop offset="1" stop-color="#202d3d"/></linearGradient>
+ <linearGradient id="mist" x2="0" y2="1"><stop stop-color="#b5c6c2" stop-opacity="0"/><stop offset="1" stop-color="#9aafb0" stop-opacity=".2"/></linearGradient>
+</defs>
+<rect width="2400" height="720" fill="url(#sky)"/>
+<circle cx="1780" cy="155" r="175" fill="url(#glow)"/><circle cx="1780" cy="155" r="57" fill="#c7d9d7" opacity=".88"/>
+<path d="M0 420 L120 340 220 390 340 285 470 400 600 300 730 410 880 300 1030 390 1170 285 1330 410 1480 300 1630 410 1780 290 1940 390 2100 300 2260 400 2400 330V720H0Z" fill="#1a293b"/>
+<g fill="#182638" stroke="#354456" stroke-width="8">
+ <path d="M260 470V300L320 250 380 300V470Z M290 300V190L320 155 350 190V300Z"/>
+ <path d="M390 470V335L450 275 510 335V470Z M420 335V225L450 190 480 225V335Z"/>
+ <path d="M1600 490V250L1680 180 1760 250V490Z M1640 250V120L1680 80 1720 120V250Z"/>
+ <path d="M1740 490V310L1800 250 1860 310V490Z"/>
+</g>
+<g fill="#263b43" stroke="#41565a" stroke-width="9">
+ <path d="M850 505V275L930 195 1010 275V505Z M885 275V145L930 100 975 145V275Z"/>
+ <path d="M980 505V340L1040 280 1100 340V505Z"/>
+ <path d="M2050 500V290L2120 220 2190 290V500Z M2085 290V165L2120 125 2155 165V290Z"/>
+</g>
+<g fill="#101d29">
+ <path d="M0 550Q70 420 145 550Q220 380 300 550Q365 430 440 550V720H0Z"/>
+ <path d="M430 560Q500 400 570 560Q650 370 720 560Q790 420 860 560V720H430Z"/>
+ <path d="M1450 570Q1520 390 1600 570Q1670 410 1740 570Q1810 390 1890 570V720H1450Z"/>
+ <path d="M1970 565Q2040 390 2110 565Q2190 380 2270 565Q2340 430 2400 565V720H1970Z"/>
+</g>
+<g fill="#91a9a6" opacity=".22"><ellipse cx="440" cy="545" rx="460" ry="55"/><ellipse cx="1450" cy="590" rx="520" ry="48"/><ellipse cx="2150" cy="535" rx="380" ry="42"/></g>
+<rect y="590" width="2400" height="130" fill="url(#mist)"/>
+<g fill="#9db7b2" opacity=".32"><circle cx="180" cy="480" r="4"/><circle cx="730" cy="515" r="5"/><circle cx="1240" cy="460" r="3"/><circle cx="1930" cy="490" r="4"/><circle cx="2200" cy="550" r="3"/></g>
+</svg>
