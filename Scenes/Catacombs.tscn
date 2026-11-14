@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="2_enemy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" path="res://Art/Backgrounds/ForestRuins.svg" id="5_background"]
 [ext_resource type="Texture2D" path="res://Art/Characters/Kairo.svg" id="6_kairo"]
 [ext_resource type="Texture2D" path="res://Art/Enemies/VoidSentinel.svg" id="7_enemy_art"]
+[ext_resource type="Script" path="res://Scripts/MobileHUD.gd" id="8_mobile"]
 
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(30, 54)
@@ -60,7 +61,7 @@ shape = SubResource("PlatformShape")
 position = Vector2(110, 575)
 collision_layer = 1
 collision_mask = 1
-script = ExtResource("1_player")
+script = ExtResource("8_mobile")
 [node name="BodyVisual" type="Sprite2D" parent="Player"]
 position = Vector2(0, -11)
 texture = ExtResource("6_kairo")
