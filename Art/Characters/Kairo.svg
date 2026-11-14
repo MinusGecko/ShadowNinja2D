@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<defs><linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#293e52"/><stop offset="1" stop-color="#101c2c"/></linearGradient><linearGradient id="steel" x2="0" y2="1"><stop stop-color="#b6d4d3"/><stop offset="1" stop-color="#536f7a"/></linearGradient></defs>
+<ellipse cx="80" cy="148" rx="39" ry="8" fill="#08111b" opacity=".55"/>
+<path d="M48 55Q15 29 35 9Q66 19 83 40Q108 12 133 17Q135 42 107 62L116 94 103 135 55 135 43 94Z" fill="#17283a" stroke="#526b79" stroke-width="5"/>
+<path d="M46 70Q80 48 114 70L108 116Q80 139 52 116Z" fill="url(#cloth)" stroke="#8ba5a8" stroke-width="4"/>
+<path d="M47 73Q80 56 113 73L107 89Q80 102 53 89Z" fill="#b7c9c4"/>
+<path d="M60 79L73 82M87 82L100 79" stroke="#132333" stroke-width="5" stroke-linecap="round"/>
+<path d="M58 110L42 140 59 147 77 119M102 110L119 140 102 147 83 119" fill="#182a3b" stroke="#617b83" stroke-width="4"/>
+<path d="M44 92L18 115 28 125 57 108M113 92L139 112 130 124 104 108" fill="#263c4c" stroke="#718d91" stroke-width="4"/>
+<path d="M20 113L8 126 15 132 31 120" fill="#9ab9b8"/>
+<path d="M116 105L145 44" stroke="#d2dfd8" stroke-width="7" stroke-linecap="round"/><path d="M145 44L151 28 151 49Z" fill="#e2eee8"/>
+<path d="M58 38Q80 18 103 38L110 53Q80 65 50 53Z" fill="#0d1a29" stroke="#66828a" stroke-width="4"/>
+<path d="M58 51Q80 43 102 51" stroke="#b4c9c5" stroke-width="3" fill="none"/>
+<path d="M68 116L80 128 92 116" fill="none" stroke="#6e9a9c" stroke-width="4"/>
+</svg>
