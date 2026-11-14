@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<defs><linearGradient id="armor" x2="0" y2="1"><stop stop-color="#80515b"/><stop offset="1" stop-color="#291e32"/></linearGradient></defs>
+<ellipse cx="80" cy="148" rx="43" ry="8" fill="#080d18" opacity=".6"/>
+<path d="M35 58L17 15 53 34 80 12 107 34 143 15 125 61 133 111 110 139 50 139 27 111Z" fill="url(#armor)" stroke="#ad7a76" stroke-width="5"/>
+<path d="M38 66L59 49 80 57 101 49 122 66 112 106 80 126 48 106Z" fill="#342b3a" stroke="#b47c77" stroke-width="4"/>
+<path d="M48 77L72 72 68 86 48 88Z M112 77L88 72 92 86 112 88Z" fill="#f2a65e"/>
+<path d="M69 103L80 94 91 103 80 116Z" fill="#111b2a" stroke="#8d676f" stroke-width="3"/>
+<path d="M42 106L23 137 43 143 64 119M118 106L137 137 117 143 96 119" fill="#342b3a" stroke="#94666d" stroke-width="5"/>
+<path d="M30 52L15 45 10 57 35 75M130 52L145 45 150 57 125 75" fill="#563844" stroke="#a87674" stroke-width="4"/>
+<path d="M55 42L49 24M105 42L111 24" stroke="#d5a18a" stroke-width="5" stroke-linecap="round"/>
+</svg>
