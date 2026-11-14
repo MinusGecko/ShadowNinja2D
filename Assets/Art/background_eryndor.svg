@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="720" viewBox="0 0 2400 720">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#101a31"/><stop offset=".58" stop-color="#26344b"/><stop offset="1" stop-color="#596276"/></linearGradient>
+ <linearGradient id="mist" x2="0" y2="1"><stop stop-color="#a6b7bd" stop-opacity="0"/><stop offset="1" stop-color="#a6b7bd" stop-opacity=".28"/></linearGradient>
+ <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#53616a"/><stop offset="1" stop-color="#202b37"/></linearGradient>
+ <linearGradient id="moon"><stop stop-color="#e4e8df"/><stop offset="1" stop-color="#9db6c0"/></linearGradient>
+</defs>
+<rect width="2400" height="720" fill="url(#sky)"/>
+<circle cx="1830" cy="142" r="66" fill="#d8e3df" opacity=".12"/><circle cx="1830" cy="142" r="48" fill="url(#moon)"/>
+<g fill="#d5e1e3" opacity=".65"><circle cx="160" cy="92" r="2"/><circle cx="390" cy="155" r="2"/><circle cx="690" cy="72" r="2"/><circle cx="1050" cy="128" r="2"/><circle cx="1330" cy="62" r="2"/><circle cx="2070" cy="90" r="2"/><circle cx="2260" cy="190" r="2"/></g>
+<path d="M0 430 180 260 310 380 500 220 710 420 900 260 1110 415 1330 230 1520 420 1740 250 1940 410 2150 270 2400 420V720H0Z" fill="#26364a"/>
+<path d="M0 500 220 360 390 470 610 320 810 490 1040 350 1260 500 1490 330 1690 480 1900 340 2110 500 2310 370 2400 430V720H0Z" fill="#1c2b3d"/>
+<g fill="#172538">
+ <path d="M700 470V280l45-42 45 42v190zM780 470V220l62-58 62 58v250zM880 470V300l40-36 40 36v170z"/>
+ <path d="M740 280h12v32h-12zm80-38h14v42h-14zm75 75h12v28h-12z" fill="#7f9aa4" opacity=".5"/>
+ <path d="M1480 485V330l40-40 40 40v155zm70 0V260l65-62 65 62v225zm125 0V345l45-42 45 42v140z"/>
+</g>
+<g fill="#111f2d">
+ <path d="M0 540q45-140 90 0 55-180 110 0 55-140 110 0v180H0zm370 0q55-170 110 0 55-150 110 0 55-190 110 0v180H370zm1350 0q55-180 110 0 55-150 110 0 60-190 120 0v180h-340zm420 0q45-160 90 0 55-190 110 0 55-140 110 0v180h-310z"/>
+</g>
+<rect y="480" width="2400" height="240" fill="url(#mist)"/>
+<path d="M0 625Q300 600 600 626T1200 620T1800 624T2400 610V720H0Z" fill="url(#ground)"/>
+<path d="M0 626Q300 600 600 626T1200 620T1800 624T2400 610" fill="none" stroke="#82959a" stroke-width="5" opacity=".55"/>
+<g fill="#8ea0a1" opacity=".45"><path d="M160 650l22-20 16 20zm420 26 18-24 22 24zm910-20 20-24 18 24zm560 8 24-30 20 30z"/></g>
+</svg>
