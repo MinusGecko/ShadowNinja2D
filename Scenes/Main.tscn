@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_player"]
 [ext_resource type="Script" path="res://Scripts/MobileHUD.gd" id="2_hud"]
@@ -6,12 +6,14 @@
 [ext_resource type="Texture2D" path="res://Art/Backgrounds/ForestRuins.svg" id="4_background"]
 [ext_resource type="Texture2D" path="res://Art/Characters/Kairo.svg" id="5_kairo"]
 [ext_resource type="Texture2D" path="res://Art/Enemies/VoidSentinel.svg" id="6_enemy_art"]
+[ext_resource type="PackedScene" path="res://Scenes/ItemPickup.tscn" id="7_item"]
+[ext_resource type="PackedScene" path="res://Scenes/LevelGate.tscn" id="8_gate"]
 
 [sub_resource type="RectangleShape2D" id="PlayerShape"]
 size = Vector2(30, 54)
 
 [sub_resource type="RectangleShape2D" id="FloorShape"]
-size = Vector2(2400, 80)
+size = Vector2(4400, 80)
 
 [sub_resource type="RectangleShape2D" id="PlatformShape"]
 size = Vector2(200, 24)
@@ -26,10 +28,10 @@ position = Vector2(1200, 360)
 texture = ExtResource("4_background")
 
 [node name="Floor" type="StaticBody2D" parent="."]
-position = Vector2(1100, 650)
+position = Vector2(2100, 650)
 
 [node name="FloorVisual" type="Polygon2D" parent="Floor"]
-polygon = PackedVector2Array(-1200, -40, 1200, -40, 1200, 40, -1200, 40)
+polygon = PackedVector2Array(-2200, -40, 2200, -40, 2200, 40, -2200, 40)
 color = Color(0.16, 0.22, 0.27, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
@@ -65,7 +67,7 @@ color = Color(0.28, 0.38, 0.43, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
 shape = SubResource("PlatformShape")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(120, 575)
 collision_layer = 1
 collision_mask = 1
@@ -137,4 +139,93 @@ offset_right = 580.0
 offset_bottom = 58.0
 theme_override_colors/font_color = Color(0.9, 0.94, 1, 1)
 theme_override_font_sizes/font_size = 18
-text = "KAIRO  |  A/D: mover   ESPACIO: saltar   CLIC IZQUIERDO: atacar"
+text = "KAIRO  |  A/D: mover   ESPACIO: saltar   CLIC IZQUIERDO: atacar"\n\n[node name="Status" type="Label" parent="HUD" groups=["hud_status"]]\noffset_left = 20.0\noffset_top = 58.0\noffset_right = 600.0\noffset_bottom = 92.0\ntheme_override_colors/font_color = Color(0.65, 0.95, 1, 1)\ntheme_override_font_sizes/font_size = 18\ntext = "VIDA: 5   ENERGÍA: 0   RECUERDOS: 0/3"
+
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(1390, 475)
+[node name="Visual" type="Polygon2D" parent="Platform4"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.32, 0.42, 0.46, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("PlatformShape")
+
+[node name="Platform5" type="StaticBody2D" parent="."]
+position = Vector2(1740, 390)
+[node name="Visual" type="Polygon2D" parent="Platform5"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.32, 0.42, 0.46, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
+shape = SubResource("PlatformShape")
+
+[node name="Platform6" type="StaticBody2D" parent="."]
+position = Vector2(2260, 500)
+[node name="Visual" type="Polygon2D" parent="Platform6"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.32, 0.42, 0.46, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
+shape = SubResource("PlatformShape")
+
+[node name="Platform7" type="StaticBody2D" parent="."]
+position = Vector2(2820, 420)
+[node name="Visual" type="Polygon2D" parent="Platform7"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.32, 0.42, 0.46, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
+shape = SubResource("PlatformShape")
+
+[node name="Platform8" type="StaticBody2D" parent="."]
+position = Vector2(3400, 500)
+[node name="Visual" type="Polygon2D" parent="Platform8"]
+polygon = PackedVector2Array(-100, -12, 100, -12, 100, 12, -100, 12)
+color = Color(0.32, 0.42, 0.46, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform8"]
+shape = SubResource("PlatformShape")
+
+[node name="Energy1" parent="." instance=ExtResource("7_item")]
+position = Vector2(800, 575)
+
+[node name="Energy2" parent="." instance=ExtResource("7_item")]
+position = Vector2(1450, 430)
+
+[node name="Energy3" parent="." instance=ExtResource("7_item")]
+position = Vector2(1810, 345)
+
+[node name="Memory1" parent="." instance=ExtResource("7_item")]
+position = Vector2(2350, 455)
+item_type = "memory"
+
+[node name="Energy4" parent="." instance=ExtResource("7_item")]
+position = Vector2(2920, 375)
+
+[node name="Memory2" parent="." instance=ExtResource("7_item")]
+position = Vector2(3460, 455)
+item_type = "memory"
+
+[node name="Enemy2" type="StaticBody2D" parent="."]
+position = Vector2(2050, 583)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("3_enemy")
+[node name="Visual" type="Sprite2D" parent="Enemy2"]
+position = Vector2(0, -11)
+texture = ExtResource("6_enemy_art")
+scale = Vector2(0.48, 0.48)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy2"]
+shape = SubResource("PlayerShape")
+
+[node name="Enemy3" type="StaticBody2D" parent="."]
+position = Vector2(3150, 583)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("3_enemy")
+[node name="Visual" type="Sprite2D" parent="Enemy3"]
+position = Vector2(0, -11)
+texture = ExtResource("6_enemy_art")
+scale = Vector2(0.48, 0.48)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy3"]
+shape = SubResource("PlayerShape")
+
+[node name="ExitToForest2" parent="." instance=ExtResource("8_gate")]
+position = Vector2(4100, 565)
+next_scene = "res://Scenes/ForestRuins_2.tscn"
+prompt_text = "BOSQUE DE LOS CIRCUITOS"
