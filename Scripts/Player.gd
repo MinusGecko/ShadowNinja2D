@@ -10,6 +10,10 @@ var facing: int = 1
 var attack_timer: float = 0.0
 var attack_cooldown: float = 0.0
 var invulnerability_timer: float = 0.0
+var anim_time: float = 0.0
+var attack_anim_time: float = 0.0
+var visual_base_position := Vector2(0, -11)
+var visual_base_scale := Vector2(0.48, 0.48)
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
@@ -18,12 +22,15 @@ var invulnerability_timer: float = 0.0
 
 func _ready() -> void:
     health = max_health
+    body_visual.position = visual_base_position
+    body_visual.scale = visual_base_scale
     attack_area.monitoring = false
     attack_shape.disabled = true
     attack_flash.visible = false
     attack_area.body_entered.connect(_on_attack_area_body_entered)
 
 func _physics_process(delta: float) -> void:
+    anim_time += delta
     attack_cooldown = maxf(0.0, attack_cooldown - delta)
     invulnerability_timer = maxf(0.0, invulnerability_timer - delta)
 
@@ -43,10 +50,14 @@ func _physics_process(delta: float) -> void:
 
     if attack_timer > 0.0:
         attack_timer -= delta
+        attack_anim_time += delta
         if attack_timer <= 0.0:
             attack_area.monitoring = false
             attack_shape.set_deferred("disabled", true)
             attack_flash.visible = false
+            attack_anim_time = 0.0
+
+    _animate_kairo(direction)
 
     if invulnerability_timer > 0.0:
         body_visual.modulate = Color(1.0, 0.45, 0.45, 1.0) if int(invulnerability_timer * 12.0) % 2 == 0 else Color.WHITE
@@ -55,16 +66,46 @@ func _physics_process(delta: float) -> void:
 
     move_and_slide()
 
+func _animate_kairo(direction: float) -> void:
+    var target_position := visual_base_position
+    var target_rotation := 0.0
+    var target_scale := visual_base_scale
+
+    if attack_timer > 0.0:
+        var swing := sin((attack_anim_time / 0.16) * PI)
+        target_rotation = -0.32 * float(facing) * swing
+        target_position.x += 5.0 * float(facing) * swing
+        target_scale = visual_base_scale * Vector2(1.12, 0.92)
+        attack_flash.rotation = -0.25 * float(facing)
+        attack_flash.scale = Vector2(0.65 + swing * 0.55, 0.8 + swing * 0.3)
+    elif not is_on_floor():
+        target_rotation = clampf(-velocity.y / 1800.0, -0.22, 0.22) * float(facing)
+        target_position.y -= 2.0
+        target_scale = visual_base_scale * Vector2(0.94, 1.08)
+    elif absf(direction) > 0.1:
+        var run_phase := anim_time * 13.0
+        target_position.y += absf(sin(run_phase)) * 5.0
+        target_rotation = sin(run_phase) * 0.055 * float(facing)
+        target_scale = visual_base_scale * Vector2(1.0 + absf(sin(run_phase)) * 0.035, 1.0 - absf(sin(run_phase)) * 0.035)
+    else:
+        target_position.y += sin(anim_time * 2.8) * 2.0
+        target_rotation = sin(anim_time * 1.4) * 0.018
+
+    body_visual.position = body_visual.position.lerp(target_position, 0.28)
+    body_visual.rotation = lerp_angle(body_visual.rotation, target_rotation, 0.3)
+    body_visual.scale = body_visual.scale.lerp(target_scale, 0.3)
+
 func _attack() -> void:
     if attack_cooldown > 0.0:
         return
     attack_cooldown = 0.38
     attack_timer = 0.16
+    attack_anim_time = 0.0
     attack_area.position.x = 38.0 * facing
     attack_area.monitoring = true
     attack_shape.set_deferred("disabled", false)
     attack_flash.position.x = 38.0 * facing
-    attack_flash.scale.x = facing
+    attack_flash.scale.x = float(facing)
     attack_flash.visible = true
 
 func take_damage(amount: int = 1) -> void:
