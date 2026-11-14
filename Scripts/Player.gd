@@ -116,6 +116,7 @@ func take_damage(amount: int = 1) -> void:
     if invulnerability_timer > 0.0:
         return
     health = maxi(0, health - amount)
+    _update_status()
     invulnerability_timer = 0.8
     velocity.y = -220.0
     velocity.x = -facing * 180.0
