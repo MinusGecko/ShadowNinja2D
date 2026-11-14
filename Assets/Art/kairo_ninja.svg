@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="190" viewBox="0 0 160 190">
+<defs><linearGradient id="cloth" x2="1" y2="1"><stop stop-color="#35465a"/><stop offset="1" stop-color="#111b2b"/></linearGradient><linearGradient id="armor" x2="0" y2="1"><stop stop-color="#71818a"/><stop offset="1" stop-color="#263747"/></linearGradient></defs>
+<!-- scarf --> <path d="M74 70Q112 76 145 105L128 118Q103 99 75 100Z" fill="#9b3546"/><path d="M125 109l29 5-23 13-22-9z" fill="#672b3a"/>
+<!-- legs --> <path d="M53 128 48 166 38 178 69 180 79 143 88 180 119 179 106 164 107 128Z" fill="#172334" stroke="#71818a" stroke-width="3"/><path d="M36 174h36l-3 12H30zm53 0h36l7 12H90z" fill="#0c1523"/>
+<!-- torso --> <path d="M49 73 103 70 119 135Q82 150 40 135Z" fill="url(#cloth)" stroke="#82919a" stroke-width="4"/><path d="M53 84 104 83 96 119 60 119Z" fill="url(#armor)" stroke="#a4b1b4" stroke-width="2"/><path d="M75 87h18v26H75z" fill="#9b3546"/><path d="M45 91 24 132 39 143 60 112m46-20 22 34-13 13-23-37" fill="#26384b" stroke="#82919a" stroke-width="4"/>
+<!-- head hood --> <path d="M44 65Q38 13 82 9Q128 12 119 70L104 88H53Z" fill="#111b2a" stroke="#82919a" stroke-width="4"/><path d="M53 53Q82 32 111 54L105 73Q81 83 57 72Z" fill="#a7b5b8"/><path d="M59 58h43l-4 9H63Z" fill="#101a28"/><path d="M65 58l8 2m17-2-8 2" stroke="#8fe1e5" stroke-width="3" stroke-linecap="round"/>
+<!-- hood crest --> <path d="M53 32 79 4 111 30 99 26 82 18 64 32Z" fill="#35485c"/>
+<!-- sword on back --> <path d="M112 86 143 31" stroke="#c5d1d0" stroke-width="7" stroke-linecap="round"/><path d="M105 90 121 98" stroke="#9b3546" stroke-width="9" stroke-linecap="round"/><path d="M137 34l9-15 3 18z" fill="#dce3dc"/>
+<!-- belt --> <path d="M43 127Q80 137 116 126" stroke="#b08b61" stroke-width="6" fill="none"/><circle cx="81" cy="132" r="6" fill="#d5b77c"/>
+</svg>
