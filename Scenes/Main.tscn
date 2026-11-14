@@ -25,13 +25,6 @@ size = Vector2(62, 42)
 position = Vector2(1200, 360)
 texture = ExtResource("4_background")
 
-[node name="BackgroundGlow" type="PointLight2D" parent="."]
-position = Vector2(1780, 155)
-color = Color(0.55, 0.72, 0.78, 1)
-energy = 0.35
-texture = ExtResource("4_background")
-texture_scale = 0.02
-
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(1100, 650)
 
