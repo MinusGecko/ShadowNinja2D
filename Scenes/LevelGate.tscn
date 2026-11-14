@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/LevelGate.gd" id="1_script"]
+
+[sub_resource type="RectangleShape2D" id="GateShape"]
+size = Vector2(70, 130)
+
+[node name="LevelGate" type="Area2D"]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource("1_script")
+
+[node name="Visual" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-24, 65, -24, -42, 0, -68, 24, -42, 24, 65)
+color = Color(0.2, 0.75, 0.95, 0.38)
+
+[node name="Inner" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-12, 60, -12, -36, 0, -50, 12, -36, 12, 60)
+color = Color(0.65, 0.95, 1, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("GateShape")
