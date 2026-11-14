@@ -3,7 +3,7 @@ config_version=5
 
 [application]
 config/name="Shadow Ninja 2D"
-run/main_scene="res://Scenes/Main.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [display]
