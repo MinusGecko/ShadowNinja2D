@@ -1,0 +1,140 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_player"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="2_enemy"]
+[ext_resource type="PackedScene" path="res://Scenes/ItemPickup.tscn" id="3_item"]
+[ext_resource type="PackedScene" path="res://Scenes/LevelGate.tscn" id="4_gate"]
+[ext_resource type="Texture2D" path="res://Art/Backgrounds/ForestRuins.svg" id="5_background"]
+[ext_resource type="Texture2D" path="res://Art/Characters/Kairo.svg" id="6_kairo"]
+[ext_resource type="Texture2D" path="res://Art/Enemies/VoidSentinel.svg" id="7_enemy_art"]
+
+[sub_resource type="RectangleShape2D" id="PlayerShape"]
+size = Vector2(30, 54)
+[sub_resource type="RectangleShape2D" id="FloorShape"]
+size = Vector2(2600, 80)
+[sub_resource type="RectangleShape2D" id="PlatformShape"]
+size = Vector2(190, 24)
+
+[node name="Catacombs" type="Node2D"]
+[node name="Backdrop" type="Sprite2D" parent="."]
+position = Vector2(1300, 360)
+texture = ExtResource("5_background")
+scale = Vector2(1.08, 1)
+modulate = Color(0.72, 0.82, 0.9, 1)
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(1300, 650)
+[node name="Visual" type="Polygon2D" parent="Floor"]
+polygon = PackedVector2Array(-1300, -40, 1300, -40, 1300, 40, -1300, 40)
+color = Color(0.12, 0.19, 0.25, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("FloorShape")
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(500, 520)
+[node name="Visual" type="Polygon2D" parent="Platform1"]
+polygon = PackedVector2Array(-95, -12, 95, -12, 95, 12, -95, 12)
+color = Color(0.27, 0.38, 0.45, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("PlatformShape")
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(1000, 440)
+[node name="Visual" type="Polygon2D" parent="Platform2"]
+polygon = PackedVector2Array(-95, -12, 95, -12, 95, 12, -95, 12)
+color = Color(0.27, 0.38, 0.45, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("PlatformShape")
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(1600, 500)
+[node name="Visual" type="Polygon2D" parent="Platform3"]
+polygon = PackedVector2Array(-95, -12, 95, -12, 95, 12, -95, 12)
+color = Color(0.27, 0.38, 0.45, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("PlatformShape")
+[node name="Platform4" type="StaticBody2D" parent="."]
+position = Vector2(2050, 410)
+[node name="Visual" type="Polygon2D" parent="Platform4"]
+polygon = PackedVector2Array(-95, -12, 95, -12, 95, 12, -95, 12)
+color = Color(0.27, 0.38, 0.45, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4"]
+shape = SubResource("PlatformShape")
+[node name="Player" type="CharacterBody2D" parent="." groups=["player"]]
+position = Vector2(110, 575)
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_player")
+[node name="BodyVisual" type="Sprite2D" parent="Player"]
+position = Vector2(0, -11)
+texture = ExtResource("6_kairo")
+scale = Vector2(0.48, 0.48)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("PlayerShape")
+[node name="AttackArea" type="Area2D" parent="Player"]
+position = Vector2(38, 0)
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea"]
+shape = SubResource("PlayerShape")
+disabled = true
+[node name="AttackFlash" type="Polygon2D" parent="Player"]
+position = Vector2(38, 0)
+visible = false
+polygon = PackedVector2Array(-22, -12, 12, -24, 38, 0, 12, 24, -22, 12)
+color = Color(0.4, 0.88, 1, 0.9)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -90)
+enabled = true
+position_smoothing_enabled = true
+position_smoothing_speed = 5.0
+limit_left = 0
+limit_top = 0
+limit_right = 2600
+limit_bottom = 720
+[node name="Enemy" type="StaticBody2D" parent="."]
+position = Vector2(1250, 583)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_enemy")
+[node name="Visual" type="Sprite2D" parent="Enemy"]
+position = Vector2(0, -11)
+texture = ExtResource("7_enemy_art")
+scale = Vector2(0.48, 0.48)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
+shape = SubResource("PlayerShape")
+[node name="Collectible1" parent="." instance=ExtResource("3_item")]
+position = Vector2(700, 575)
+
+[node name="Collectible2" parent="." instance=ExtResource("3_item")]
+position = Vector2(1500, 390)
+item_type = "memory"
+[node name="Collectible3" parent="." instance=ExtResource("3_item")]
+position = Vector2(2100, 460)
+
+[node name="Exit" parent="." instance=ExtResource("4_gate")]
+position = Vector2(2450, 565)
+next_scene = "res://Scenes/ForestRuins_2.tscn"
+prompt_text = "CATACUMBAS DEL PULSO"
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="Help" type="Label" parent="HUD"]
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 700.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.9, 0.94, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "CATACUMBAS DEL PULSO  |  A/D mover   ESPACIO saltar   CLIC atacar"
+[node name="Status" type="Label" parent="HUD" groups=["hud_status"]]
+offset_left = 20.0
+offset_top = 58.0
+offset_right = 600.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.65, 0.95, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "VIDA: 5   ENERGÍA: 0   RECUERDOS: 0/3"
+[node name="MobileControls" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_player")
