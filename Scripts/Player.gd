@@ -13,7 +13,7 @@ var invulnerability_timer: float = 0.0
 
 @onready var attack_area: Area2D = $AttackArea
 @onready var attack_shape: CollisionShape2D = $AttackArea/CollisionShape2D
-@onready var body_visual: Polygon2D = $BodyVisual
+@onready var body_visual: Sprite2D = $BodyVisual
 @onready var attack_flash: Polygon2D = $AttackFlash
 
 func _ready() -> void:
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
     var direction := Input.get_axis("move_left", "move_right")
     if direction != 0.0:
         facing = 1 if direction > 0.0 else -1
-        body_visual.scale.x = facing
+        body_visual.flip_h = facing < 0
     velocity.x = direction * move_speed
 
     if Input.is_action_just_pressed("attack"):
