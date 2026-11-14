@@ -72,9 +72,9 @@ collision_mask = 1
 script = ExtResource("1_player")
 
 [node name="BodyVisual" type="Sprite2D" parent="Player"]
-position = Vector2(0, -4)
+position = Vector2(0, -11)
 texture = ExtResource("5_kairo")
-scale = Vector2(0.78, 0.78)
+scale = Vector2(0.48, 0.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("PlayerShape")
@@ -106,15 +106,15 @@ limit_right = 2400
 limit_bottom = 720
 
 [node name="Enemy" type="StaticBody2D" parent="."]
-position = Vector2(590, 605)
+position = Vector2(590, 583)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("3_enemy")
 
 [node name="Visual" type="Sprite2D" parent="Enemy"]
-position = Vector2(0, -5)
+position = Vector2(0, -11)
 texture = ExtResource("6_enemy_art")
-scale = Vector2(0.78, 0.78)
+scale = Vector2(0.48, 0.48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 shape = SubResource("PlayerShape")
